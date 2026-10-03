@@ -1,0 +1,35 @@
+name: Check portfolio links
+on:
+  push:
+    paths: [".github/links.txt", ".github/workflows/check-links.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check each site
+        run: |
+          {
+            echo "# Link report"
+            echo
+            echo "Checked: $(date -u '+%Y-%m-%d %H:%M UTC')"
+            echo
+            echo "| Repo | Status |"
+            echo "|---|---|"
+            while read -r r; do
+              [ -z "$r" ] && continue
+              code=$(curl -s -o /dev/null -w '%{http_code}' -L --max-time 20 "https://gervenbuy.github.io/$r/")
+              echo "| $r | $code |"
+            done < .github/links.txt
+          } > link-report.md
+          cat link-report.md
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add link-report.md
+          git commit -m "Update link report" || exit 0
+          git push
