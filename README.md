@@ -8,6 +8,7 @@
 Websites · AI Automation · Business Systems · Hands-on AI Courses
 
 [![LINE 官方帳號 聯絡我](https://img.shields.io/badge/LINE-加入官方帳號_Contact_Me-06C755?style=for-the-badge&logo=line&logoColor=white)](https://lin.ee/U73PXxRf)
+[![作品集網站 Website](https://img.shields.io/badge/作品集網站-Website-f4c46b?style=for-the-badge)](https://gervenbuy.github.io/ecom-genie/)
 [![YouTube](https://img.shields.io/badge/YouTube-@gervenbuy-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@gervenbuy)
 
 </div>

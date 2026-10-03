@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>電商神助手 大軍｜作品集 · E-commerce Genie Portfolio</title>
+<meta name="description" content="電商神助手 大軍的作品集：品牌官網、AI 自動化、業務管理系統與 AI 實戰課程。Portfolio of Dajun, E-commerce Genie: websites, AI automation, business systems and AI courses.">
+<meta property="og:title" content="電商神助手 大軍｜作品集 · E-commerce Genie">
+<meta property="og:description" content="品牌官網・AI 自動化・管理系統・AI 課程，共 69 件作品。Websites, AI automation, business systems and courses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gervenbuy.github.io/ecom-genie/">
+<meta name="theme-color" content="#0b1020">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧞</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1020; --bg2:#10172b; --card:#141c33; --line:#232d4a;
+  --text:#eef1f8; --muted:#9aa4bf; --dim:#6b7592;
+  --gold:#f4c46b; --gold2:#ffdf9e; --violet:#8b7bff; --teal:#3fd0c9;
+  --line-green:#06c755;
+  --radius:18px;
+  --sans:"Inter","Noto Sans TC",system-ui,-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+  --serif:"Noto Serif TC","Noto Sans TC",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+[data-lang="en"] .zh,[data-lang="zh"] .en{display:none!important}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(11,16,32,.72);border-bottom:1px solid rgba(255,255,255,.06)}
+nav .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.01em}
+.logo .lamp{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),#e08a3c);font-size:18px;box-shadow:0 6px 20px -6px rgba(244,196,107,.6)}
+.logo small{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.08em}
+.nav-links{display:flex;gap:26px;margin-left:auto;font-size:14px;color:var(--muted)}
+.nav-links a:hover{color:var(--text)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;font-size:13px}
+.lang button{all:unset;cursor:pointer;padding:4px 11px;border-radius:999px;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--text);color:var(--bg);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-line{background:var(--line-green);color:#fff;box-shadow:0 10px 30px -10px rgba(6,199,85,.7)}
+.btn-ghost{border:1px solid var(--line);color:var(--text);background:none;font:inherit;font-weight:600}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold2)}
+.btn-sm{padding:8px 16px;font-size:13px}
+.line-ico{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;padding:96px 0 80px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-30% -10% auto auto;width:780px;height:780px;background:radial-gradient(circle,rgba(139,123,255,.28),transparent 60%);pointer-events:none}
+.hero::after{content:"";position:absolute;left:-200px;bottom:-320px;width:700px;height:700px;background:radial-gradient(circle,rgba(244,196,107,.18),transparent 60%);pointer-events:none}
+.stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 20% 30%,#fff8,transparent),radial-gradient(1px 1px at 70% 20%,#fff6,transparent),radial-gradient(1.5px 1.5px at 85% 60%,#ffdf9e88,transparent),radial-gradient(1px 1px at 40% 80%,#fff5,transparent),radial-gradient(1px 1px at 10% 70%,#fff4,transparent),radial-gradient(1.5px 1.5px at 55% 45%,#fff5,transparent);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em;color:var(--gold2);border:1px solid rgba(244,196,107,.3);background:rgba(244,196,107,.07);padding:6px 14px;border-radius:999px;margin-bottom:24px}
+h1{font-family:var(--serif);font-size:clamp(36px,5.6vw,64px);line-height:1.18;font-weight:900;letter-spacing:-.01em}
+[data-lang="en"] h1{font-family:var(--sans);font-weight:800;letter-spacing:-.03em}
+h1 .glow{background:linear-gradient(100deg,var(--gold2),var(--gold) 40%,#ff9d6c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{margin-top:22px;font-size:18px;color:var(--muted);max-width:620px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:52px;max-width:640px}
+.stat b{display:block;font-size:30px;font-weight:800;color:var(--text);letter-spacing:-.02em}
+.stat span{font-size:13px;color:var(--dim)}
+.profile{position:relative;background:linear-gradient(160deg,#1a2342,#11182d);border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.profile .avatar{width:84px;height:84px;border-radius:24px;background:linear-gradient(135deg,var(--gold),#e08a3c 60%,var(--violet));display:grid;place-items:center;font-family:var(--serif);font-size:38px;font-weight:900;color:#1a1206}
+.profile h3{margin-top:18px;font-size:22px}
+.profile .role{color:var(--gold2);font-size:14px}
+.profile ul{list-style:none;margin-top:18px;display:grid;gap:10px;font-size:14px;color:var(--muted)}
+.profile li{display:flex;gap:10px}
+.profile li::before{content:"✦";color:var(--gold)}
+.profile .float{position:absolute;right:-14px;top:-14px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:8px 12px;font-size:12px;color:var(--gold2);transform:rotate(4deg)}
+
+/* sections */
+section{padding:88px 0;scroll-margin-top:64px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.kicker{font-size:13px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.25}
+.sec-head p{color:var(--muted);max-width:460px}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:border-color .25s,transform .25s}
+.svc:hover{border-color:rgba(244,196,107,.45);transform:translateY(-4px)}
+.svc .ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px}
+.svc h3{font-size:18px;margin-bottom:8px}
+.svc p{font-size:14px;color:var(--muted)}
+.svc .count{margin-top:16px;font-size:13px;color:var(--dim)}
+
+/* works */
+#works{background:linear-gradient(180deg,var(--bg),var(--bg2) 20%,var(--bg2) 80%,var(--bg))}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:28px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{all:unset;cursor:pointer;padding:8px 16px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:var(--muted);transition:.2s}
+.chip:hover{color:var(--text);border-color:#3a4669}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#1a1206;font-weight:600}
+.chip .n{opacity:.6;margin-left:4px;font-size:12px}
+.search{margin-left:auto;position:relative}
+.search input{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 16px 9px 38px;color:var(--text);font:inherit;font-size:14px;width:220px;outline:none}
+.search input:focus{border-color:var(--gold)}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--dim)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.work{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s}
+.work:hover{transform:translateY(-5px);border-color:rgba(244,196,107,.4);box-shadow:0 24px 50px -24px rgba(0,0,0,.7)}
+.thumb{position:relative;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line)}
+.thumb .cover{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
+.thumb .cover .glyph{position:absolute;right:16px;top:14px;opacity:.9}
+.thumb .cover .big{font-family:var(--serif);font-weight:900;font-size:22px;line-height:1.3;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.35);max-width:85%}
+.thumb iframe{position:absolute;top:0;left:0;width:400%;height:400%;transform:scale(.25);transform-origin:0 0;border:0;pointer-events:none;background:#fff;opacity:0;transition:opacity .6s}
+.thumb iframe.ready{opacity:1}
+.badge{position:absolute;left:12px;top:12px;z-index:2;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:rgba(11,16,32,.8);backdrop-filter:blur(6px);color:var(--gold2);border:1px solid rgba(244,196,107,.35)}
+.work .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.work .cat{font-size:12px;color:var(--dim);letter-spacing:.06em;margin-bottom:6px}
+.work h3{font-size:17px;line-height:1.4;margin-bottom:6px}
+.work p{font-size:14px;color:var(--muted);flex:1}
+.work .links{display:flex;gap:16px;margin-top:16px;font-size:13px;font-weight:600}
+.work .links a{display:inline-flex;align-items:center;gap:6px;color:var(--gold2)}
+.work .links a.code{color:var(--dim)}
+.work .links a:hover{text-decoration:underline}
+.empty{grid-column:1/-1;text-align:center;color:var(--dim);padding:60px 0}
+.more{display:flex;justify-content:center;margin-top:34px}
+
+/* youtube */
+.yt{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:linear-gradient(135deg,#1d1424,#141c33);border:1px solid var(--line);border-radius:28px;padding:44px}
+.yt .play{aspect-ratio:16/9;border-radius:20px;background:radial-gradient(circle at 30% 30%,#ff4d4d55,transparent 60%),linear-gradient(135deg,#2a1830,#151b31);display:grid;place-items:center;border:1px solid var(--line);position:relative;overflow:hidden}
+.yt .play .tri{width:84px;height:84px;border-radius:50%;background:#ff0000;display:grid;place-items:center;box-shadow:0 20px 50px -10px rgba(255,0,0,.6);transition:transform .25s}
+.yt .play:hover .tri{transform:scale(1.08)}
+.yt .tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px}
+.yt .tags span{font-size:13px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--muted)}
+
+/* reviews band */
+.band{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border:1px dashed rgba(244,196,107,.35);border-radius:22px;padding:28px 32px;background:rgba(244,196,107,.04)}
+.band h3{font-size:20px}
+.band p{color:var(--muted);font-size:15px}
+
+/* contact */
+.contact{text-align:center;position:relative;overflow:hidden;border-radius:32px;padding:80px 24px;background:radial-gradient(ellipse at top,rgba(244,196,107,.22),transparent 60%),linear-gradient(160deg,#18213d,#0f1528);border:1px solid var(--line)}
+.contact h2{font-family:var(--serif);font-size:clamp(30px,4.4vw,48px)}
+[data-lang="en"] .contact h2{font-family:var(--sans)}
+.contact p{color:var(--muted);margin:16px auto 32px;max-width:560px;font-size:17px}
+.contact .who{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.contact .who span{font-size:14px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.contact .url{margin-top:18px;font-size:13px;color:var(--dim)}
+footer{padding:40px 0 60px;color:var(--dim);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a:hover{color:var(--text)}
+
+.fab{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--line-green);display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(6,199,85,.8);transition:transform .2s}
+.fab:hover{transform:scale(1.08)}
+.fab svg{width:30px;height:30px}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .yt{grid-template-columns:1fr;padding:28px}
+  .nav-links{display:none}
+  .lang{margin-left:auto}
+}
+@media (max-width:620px){
+  .wrap{padding:0 16px}
+  .hero{padding:56px 0 48px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .services,.grid{grid-template-columns:1fr}
+  .search{margin-left:0;width:100%}
+  .search input{width:100%}
+  section{padding:60px 0}
+  nav .btn-line .t{display:none}
+  nav .btn-line{padding:9px}
+  .logo small{display:none}
+  .profile .float{right:10px}
+}
+</style>
+</head>
+<body data-lang="zh">
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo"><span class="lamp">🧞</span><span><span class="zh">電商神助手</span><span class="en">E-commerce Genie</span><small>ECOM-GENIE · 大軍 DAJUN</small></span></a>
+    <div class="nav-links">
+      <a href="#services"><span class="zh">服務</span><span class="en">Services</span></a>
+      <a href="#works"><span class="zh">作品</span><span class="en">Work</span></a>
+      <a href="#videos"><span class="zh">影片</span><span class="en">Videos</span></a>
+      <a href="#contact"><span class="zh">聯絡</span><span class="en">Contact</span></a>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-set="zh" aria-pressed="true">中</button><button data-set="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-line btn-sm" href="https://lin.ee/U73PXxRf" target="_blank" rel="noopener" aria-label="LINE"><svg class="line-ico" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.5C6.2 2.5 1.5 6.3 1.5 11c0 4.2 3.7 7.7 8.8 8.4.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6.1 1.5-1.7 2.3-3.4 2.3-5.3 0-4.7-4.7-8.5-10.5-8.5z"/></svg><span class="t"><span class="zh">LINE 諮詢</span><span class="en">Chat on LINE</span></span></a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="stars"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">✦ <span class="zh">電商神助手・大軍的作品集</span><span class="en">Dajun · E-commerce Genie Portfolio</span></div>
+      <h1>
+        <span class="zh">把你的生意願望，<br>變成<span class="glow">會自己賺錢</span>的系統</span>
+        <span class="en">Your business wishes,<br>turned into systems that <span class="glow">sell for you</span></span>
+      </h1>
+      <p class="lead">
+        <span class="zh">從品牌官網、LINE OA 與 AI 自動化工作流，到客製管理系統和 AI 實戰課程。9 年電商實戰經驗，幫中小企業把重複的事交給系統，把時間留給成長。</span>
+        <span class="en">Brand websites, LINE OA and AI automation workflows, custom business systems and hands-on AI courses. Nine years in e-commerce, helping small businesses hand repetitive work to systems and spend their time on growth.</span>
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-line" href="https://lin.ee/U73PXxRf" target="_blank" rel="noopener"><svg class="line-ico" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.5C6.2 2.5 1.5 6.3 1.5 11c0 4.2 3.7 7.7 8.8 8.4.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6.1 1.5-1.7 2.3-3.4 2.3-5.3 0-4.7-4.7-8.5-10.5-8.5z"/></svg><span class="zh">加入 LINE 免費諮詢</span><span class="en">Free consult on LINE</span></a>
+        <a class="btn btn-ghost" href="#works"><span class="zh">看作品</span><span class="en">See the work</span> →</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>9+</b><span class="zh">年電商實戰</span><span class="en">years in e-commerce</span></div>
+        <div class="stat"><b>69</b><span class="zh">件上線作品</span><span class="en">live projects</span></div>
+        <div class="stat"><b>2022</b><span class="zh">蝦皮金選賣家</span><span class="en">Shopee Preferred</span></div>
+        <div class="stat"><b>14+</b><span class="zh">場 AI 課程</span><span class="en">AI courses</span></div>
+      </div>
+    </div>
+    <aside class="profile reveal">
+      <span class="float"><span class="zh">台中在地服務</span><span class="en">Based in Taichung</span></span>
+      <div class="avatar">軍</div>
+      <h3><span class="zh">大軍</span><span class="en">Dajun</span></h3>
+      <div class="role"><span class="zh">電商神助手 創辦人・AI 講師</span><span class="en">Founder, E-commerce Genie · AI trainer</span></div>
+      <ul>
+        <li><span class="zh">企業 AI 自動化工作流（Notion × Claude 智慧預約）</span><span class="en">AI automation workflows (Notion × Claude booking)</span></li>
+        <li><span class="zh">LINE OA 優化與客服機器人</span><span class="en">LINE OA optimisation & chatbots</span></li>
+        <li><span class="zh">蝦皮經營與 AI SEO</span><span class="en">Shopee growth & AI SEO</span></li>
+        <li><span class="zh">網站、微型工具與簡報美化</span><span class="en">Websites, micro-tools & deck design</span></li>
+      </ul>
+    </aside>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="kicker">Services</div><h2><span class="zh">我可以幫你做什麼</span><span class="en">What I can build for you</span></h2></div>
+      <p><span class="zh">每一件作品都是真實客戶或課程的成品，點進去就能直接操作。</span><span class="en">Every project below is real, built for a client or a class, and you can click in and use it.</span></p>
+    </div>
+    <div class="services"><div class="svc reveal"><div class="ico" style="background:rgba(244,196,107,.12);color:#f4c46b"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><h3><span class="zh">品牌官網・銷售頁</span><span class="en">Brand sites & landing pages</span></h3><p><span class="zh">讓客戶一眼看懂你、信任你，並且直接下單或預約。</span><span class="en">Pages that make customers understand and trust you, then buy or book.</span></p><div class="count"><span class="zh">20 件作品</span><span class="en">20 projects</span></div></div><div class="svc reveal"><div class="ico" style="background:rgba(63,208,201,.12);color:#3fd0c9"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></div><h3><span class="zh">客製管理系統</span><span class="en">Custom business systems</span></h3><p><span class="zh">CRM、報價請款、療程堂數、維修單、會員系統，取代紙本與 Excel。</span><span class="en">CRM, quotes, invoicing, repairs and memberships that replace paper and spreadsheets.</span></p><div class="count"><span class="zh">20 件作品</span><span class="en">20 projects</span></div></div><div class="svc reveal"><div class="ico" style="background:rgba(139,123,255,.12);color:#8b7bff"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></div><h3><span class="zh">活動報名・預約</span><span class="en">Events & bookings</span></h3><p><span class="zh">招商、市集、講座、體驗預約，表單資料自動彙整。</span><span class="en">Vendor recruitment, markets, seminars and bookings with automatic data collection.</span></p><div class="count"><span class="zh">12 件作品</span><span class="en">12 projects</span></div></div><div class="svc reveal"><div class="ico" style="background:rgba(255,143,177,.12);color:#ff8fb1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg></div><h3><span class="zh">AI 實戰課程</span><span class="en">Hands-on AI courses</span></h3><p><span class="zh">LINE 機器人、AI 影音、Claude 自動化，帶學員當天做出成果。</span><span class="en">LINE bots, AI video and Claude automation; students leave with something working.</span></p><div class="count"><span class="zh">14 件作品</span><span class="en">14 projects</span></div></div></div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="kicker">Portfolio</div><h2><span class="zh">作品集</span><span class="en">Selected work</span></h2></div>
+      <p><span class="zh">預設顯示精選作品，可依類別篩選或搜尋全部 69 件。</span><span class="en">Showing featured work. Filter by category or search all 69 projects.</span></p>
+    </div>
+    <div class="toolbar">
+      <div class="chips" id="chips"></div>
+      <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="搜尋作品…" aria-label="Search"></label>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="more" id="moreWrap"><button class="btn btn-ghost" id="more"><span class="zh">看全部作品</span><span class="en">View all projects</span></button></div>
+  </div>
+</section>
+
+<section id="videos">
+  <div class="wrap">
+    <div class="yt reveal">
+      <a class="play" href="https://youtube.com/@gervenbuy" target="_blank" rel="noopener" aria-label="YouTube">
+        <span class="tri"><svg width="34" height="34" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div>
+        <div class="kicker">YouTube</div>
+        <h2><span class="zh">超滑電車男</span><span class="en">超滑電車男 on YouTube</span></h2>
+        <div class="tags">
+          <span class="zh">電動滑板車開箱</span><span class="en">E-scooter reviews</span>
+          <span class="zh">電輔車選購</span><span class="en">E-bike buying guides</span>
+          <span class="zh">AI 影片剪輯</span><span class="en">AI video editing</span>
+          <span class="zh">AI 音樂翻唱</span><span class="en">AI music covers</span>
+          <span class="zh">生活美食 vlog</span><span class="en">Lifestyle vlogs</span>
+        </div>
+        <a class="btn btn-ghost" href="https://youtube.com/@gervenbuy" target="_blank" rel="noopener"><span class="zh">前往頻道 @gervenbuy</span><span class="en">Visit @gervenbuy</span> ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="band reveal">
+      <div><h3><span class="zh">⭐ 學員怎麼說？</span><span class="en">⭐ What students say</span></h3><p><span class="zh">上過課的學員心得，都整理在心得牆。</span><span class="en">Feedback from past students, collected on one wall.</span></p></div>
+      <a class="btn btn-ghost" href="https://gervenbuy.github.io/DSJ-REVIEW-WALL/" target="_blank" rel="noopener"><span class="zh">看學員心得牆</span><span class="en">Read testimonials</span> ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact reveal">
+      <div class="kicker">Contact</div>
+      <h2><span class="zh">有想做的網站或系統嗎？</span><span class="en">Have a project in mind?</span></h2>
+      <p><span class="zh">加入 LINE 官方帳號，直接告訴我你的需求，我會親自回覆。</span><span class="en">Add my LINE Official Account and tell me what you need. I reply personally.</span></p>
+      <div class="who">
+        <span class="zh">🏢 業主・品牌</span><span class="en">🏢 Business owners</span>
+        <span class="zh">🤝 合作夥伴</span><span class="en">🤝 Partners</span>
+        <span class="zh">🎓 想上課的學員</span><span class="en">🎓 Students</span>
+      </div>
+      <a class="btn btn-line" style="font-size:17px;padding:16px 30px" href="https://lin.ee/U73PXxRf" target="_blank" rel="noopener"><svg class="line-ico" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.5C6.2 2.5 1.5 6.3 1.5 11c0 4.2 3.7 7.7 8.8 8.4.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6.1 1.5-1.7 2.3-3.4 2.3-5.3 0-4.7-4.7-8.5-10.5-8.5z"/></svg><span class="zh">加入 LINE 官方帳號</span><span class="en">Add on LINE</span></a>
+      <div class="url">https://lin.ee/U73PXxRf</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 <span class="zh">電商神助手 大軍</span><span class="en">E-commerce Genie · Dajun</span></span>
+    <span><a href="https://github.com/gervenbuy" target="_blank" rel="noopener">GitHub</a> · <a href="https://youtube.com/@gervenbuy" target="_blank" rel="noopener">YouTube</a> · <a href="https://lin.ee/U73PXxRf" target="_blank" rel="noopener">LINE</a></span>
+  </div>
+</footer>
+
+<a class="fab" href="https://lin.ee/U73PXxRf" target="_blank" rel="noopener" aria-label="LINE"><svg class="line-ico" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.5C6.2 2.5 1.5 6.3 1.5 11c0 4.2 3.7 7.7 8.8 8.4.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6.1 1.5-1.7 2.3-3.4 2.3-5.3 0-4.7-4.7-8.5-10.5-8.5z"/></svg></a>
+
+<script>
+const DATA = {"works": [{"r": "danbiker-official", "c": "brand", "n": "電車男電能車 官網", "zh": "台中電動滑板車、電輔車維修與銷售官網（WAYMAX 授權經銷）", "en": "Official site for a Taichung e-scooter & e-bike repair and sales shop", "f": true, "ne": "DanBiker EV – Official Site"}, {"r": "ebike", "c": "brand", "n": "電車男電能車｜智慧出行專家", "zh": "電動車品牌形象頁", "en": "Brand landing page for an EV mobility shop", "f": false, "ne": "DanBiker EV – Smart Mobility"}, {"r": "minsheng-foods-2", "c": "brand", "n": "民生食品 Minnsei Foods（改版）", "zh": "民生食品官網第二版設計", "en": "Redesigned corporate site, version 2", "f": true, "ne": "Minnsei Foods Taiwan"}, {"r": "xlxkimchi", "c": "brand", "n": "喜連香泡菜", "zh": "台灣製泡菜品牌銷售頁", "en": "Product site for a Taiwanese kimchi brand", "f": true, "ne": "Xi Lian Xiang Kimchi"}, {"r": "kidjuice", "c": "brand", "n": "汁心菓", "zh": "兒童植萃蘋果飲品牌頁", "en": "Brand page for a kids' plant-based apple drink", "f": true, "ne": "Juicy Heart Kids' Drink"}, {"r": "zyfresh", "c": "brand", "n": "喆圓農產行", "zh": "農產行官方網站", "en": "Official site for a produce store", "f": false, "ne": "Zhe Yuan Produce"}, {"r": "vigore", "c": "brand", "n": "維格禮儀", "zh": "生命禮儀服務公司官網", "en": "Website for a funeral services company", "f": true, "ne": "Vigore Funeral Services"}, {"r": "triwin", "c": "brand", "n": "三瑩設計", "zh": "室內設計公司形象網站", "en": "Portfolio site for an interior design studio", "f": true, "ne": "Triwin Interior Design"}, {"r": "goodguys", "c": "brand", "n": "好樣子空間", "zh": "借址登記與教室租借服務網站", "en": "Site for a business address & classroom rental service", "f": false, "ne": "Good Guys Space"}, {"r": "ht.pet", "c": "brand", "n": "Body & Pet Comb.", "zh": "寵物生活品牌網站", "en": "Brand site for a pet lifestyle business", "f": false, "ne": "Body & Pet Comb."}, {"r": "ds.lab", "c": "brand", "n": "D.Scent Lab", "zh": "香氛品牌形象網站", "en": "Brand site for a scent / aroma lab", "f": false, "ne": "D.Scent Lab"}, {"r": "hyy", "c": "brand", "n": "謝雅雲 個人品牌", "zh": "協會創辦人個人品牌頁", "en": "Personal brand page for an association founder", "f": false, "ne": "Hsieh Ya-Yun Personal Brand"}, {"r": "doby", "c": "brand", "n": "豆比手語 B2B 方案", "zh": "手語服務企業方案銷售頁", "en": "B2B sales page for sign-language services", "f": false, "ne": "Doby Sign Language B2B"}, {"r": "fff", "c": "brand", "n": "FFF Institute V5 案例分享", "zh": "裱框研究所作品案例頁", "en": "Case-study page for a custom framing studio", "f": false, "ne": "FFF Institute Case Studies"}, {"r": "jf", "c": "brand", "n": "FFF Institute 官網", "zh": "裱框・空間美學事務所官網", "en": "Official site for a framing & interior art studio", "f": false, "ne": "FFF Institute Official Site"}, {"r": "Kuanartspace", "c": "brand", "n": "寬藝術空間", "zh": "藝廊展覽頁（排版複刻練習）", "en": "Art gallery exhibitions page (layout recreation)", "f": false, "ne": "Kuan Art Space"}, {"r": "airgle", "c": "brand", "n": "Airgle 嚴選", "zh": "空氣清淨機選品銷售頁", "en": "Curated product page for Airgle air purifiers", "f": false, "ne": "Airgle Curated Store"}, {"r": "yaolin", "c": "brand", "n": "新藥林藥局", "zh": "藥局線上選品目錄", "en": "Online product catalog for a pharmacy", "f": false, "ne": "Xin Yao Lin Pharmacy Catalog"}, {"r": "fuxing-map", "c": "brand", "n": "福興農遊地圖", "zh": "在地農遊互動地圖", "en": "Interactive farm-tourism map", "f": false, "ne": "Fuxing Farm Tour Map"}, {"r": "ecpro", "c": "brand", "n": "電商神助手 服務介紹", "zh": "自家服務頁：LINE@、蝦皮、網站優化、簡報美化", "en": "Own service page: LINE OA, Shopee, web & deck design", "f": false, "ne": "E-commerce Genie Services"}, {"r": "MuseumofIllusions", "c": "event", "n": "幻覺博物館 預約體驗", "zh": "參觀、企業包場、派對預約頁", "en": "Booking page for visits, private events and parties", "f": true, "ne": "Museum of Illusions Booking"}, {"r": "d.s-lab.course", "c": "event", "n": "D.SCENT LAB 預約表單", "zh": "香氛課程預約表單", "en": "Booking form for scent workshops", "f": false, "ne": "D.Scent Lab Booking Form"}, {"r": "guoran", "c": "event", "n": "果然是你 × BK 個人專場", "zh": "港邊音樂活動宣傳頁", "en": "Promo page for a harbourside music night", "f": true, "ne": "BK Sunset Harbor Night"}, {"r": "spring2026", "c": "event", "n": "台南河樂廣場年節市集", "zh": "攤商報名頁", "en": "Vendor sign-up page for a New Year market", "f": true, "ne": "Tainan New Year Market Sign-up"}, {"r": "zblf", "c": "event", "n": "2026 竹北光節", "zh": "燈會市集招商報名頁", "en": "Vendor recruitment page for a lantern festival", "f": true, "ne": "2026 Zhubei Light Festival"}, {"r": "mario", "c": "event", "n": "2026 豐華馬力喔春酒", "zh": "BNI 分會春酒活動頁", "en": "Spring banquet page for a BNI chapter", "f": false, "ne": "2026 Fenghua Spring Banquet"}, {"r": "fhwa.guest", "c": "event", "n": "BNI 菁英專題講座", "zh": "講座來賓邀約網站", "en": "Guest invitation site for a BNI seminar", "f": true, "ne": "BNI Elite Seminar Invitation"}, {"r": "fenghua-form", "c": "event", "n": "豐華分會來賓評議表", "zh": "會議來賓回饋表單", "en": "Guest feedback form for chapter meetings", "f": false, "ne": "Chapter Guest Feedback Form"}, {"r": "saea", "c": "event", "n": "永續身心靈美學教育協會", "zh": "入會申請表單", "en": "Membership application form for an association", "f": false, "ne": "SAEA Membership Application"}, {"r": "nano-form", "c": "event", "n": "Nano Banana Pro 課程報名", "zh": "課程報名表單", "en": "Course registration form", "f": false, "ne": "Nano Banana Pro Registration"}, {"r": "bear", "c": "event", "n": "越南富國島 尊榮4日遊", "zh": "母親節旅遊行程銷售頁", "en": "Mother's Day travel package sales page", "f": false, "ne": "Phu Quoc 4-Day Luxury Tour"}, {"r": "xiao", "c": "event", "n": "小琉球三天兩夜", "zh": "旅遊行程介紹頁", "en": "Travel itinerary page", "f": false, "ne": "Xiaoliuqiu 3-Day Trip"}, {"r": "crm", "c": "system", "n": "電車男 CRM 系統", "zh": "客戶、維修單、庫存、保固管理", "en": "CRM for customers, repair orders, inventory and warranties", "f": true, "ne": "DanBiker CRM"}, {"r": "danbiker-kanban", "c": "system", "n": "迪特軍EV 維修看板", "zh": "維修進度看板", "en": "Repair-progress kanban board", "f": false, "ne": "EV Repair Kanban"}, {"r": "fix", "c": "system", "n": "電動滑板車維修單", "zh": "線上維修單", "en": "Online repair order form", "f": false, "ne": "E-scooter Repair Order"}, {"r": "repair-note", "c": "system", "n": "電動滑板車維修筆記", "zh": "維修紀錄與零件規格", "en": "Repair log with parts specs", "f": false, "ne": "E-scooter Repair Notes"}, {"r": "t3-setting", "c": "system", "n": "T1/T3 儀表參數手冊", "zh": "車輛儀表後台設定手冊", "en": "Dashboard settings manual for e-scooters", "f": false, "ne": "T1/T3 Dashboard Settings Manual"}, {"r": "bloom-crm", "c": "system", "n": "元序健康 療程管理系統", "zh": "SPA／物理治療療程堂數管理", "en": "Session-package CRM for spa & physio businesses", "f": true, "ne": "Bloom CRM – Session Manager"}, {"r": "debola", "c": "system", "n": "美容保養 CRM", "zh": "美容業客戶管理系統", "en": "Customer management for beauty salons", "f": false, "ne": "Beauty Salon CRM"}, {"r": "vicky", "c": "system", "n": "醫美管理系統 DEMO", "zh": "醫美診所管理系統展示", "en": "Demo management system for aesthetic clinics", "f": false, "ne": "Aesthetic Clinic System Demo"}, {"r": "chensi-cafe", "c": "system", "n": "辰巳珈琲 VIP 會員系統", "zh": "咖啡店會員系統", "en": "VIP membership system for a café", "f": false, "ne": "Chensi Café VIP Membership"}, {"r": "Quote", "c": "system", "n": "專業報價工具", "zh": "快速產生報價單", "en": "Quotation generator", "f": true, "ne": "Pro Quotation Tool"}, {"r": "inv", "c": "system", "n": "任務報價與請款管理", "zh": "報價與請款追蹤", "en": "Quote & invoicing tracker", "f": false, "ne": "Quote & Invoice Manager"}, {"r": "ledgerV1.1", "c": "system", "n": "工作室財務健康 APP v1.1", "zh": "工作室收支與財務健康分析", "en": "Studio finance-health app (latest)", "f": true, "ne": "Studio Finance Health App"}, {"r": "expense2", "c": "system", "n": "活動費用分攤計算器 v2", "zh": "費用分攤簡化版", "en": "Cost-splitting calculator, v2", "f": false, "ne": "Event Cost Splitter"}, {"r": "OCEAN2", "c": "system", "n": "OCEAN 五大人格分析系統", "zh": "人格測驗與分析", "en": "Big Five personality analysis tool", "f": true, "ne": "Big Five Personality System"}, {"r": "color", "c": "system", "n": "全能色票模擬器", "zh": "色彩搭配模擬工具", "en": "Colour palette simulator", "f": false, "ne": "Colour Palette Simulator"}, {"r": "bni-lights", "c": "system", "n": "BNI 戰情室", "zh": "分會數據戰情儀表板", "en": "BNI chapter performance dashboard", "f": false, "ne": "BNI War Room Dashboard"}, {"r": "fh.autoppt", "c": "system", "n": "商務引薦自動排版系統", "zh": "自動產生引薦簡報", "en": "Auto-layout tool for referral slides", "f": false, "ne": "Referral Slide Auto-Layout"}, {"r": "streamvault", "c": "system", "n": "StreamVault 影音訂閱平台", "zh": "Netflix 風格影音平台（前後台）", "en": "Netflix-style streaming site with admin panel", "f": true, "ne": "StreamVault Streaming Platform"}, {"r": "streamvideo", "c": "system", "n": "Juicy Stream", "zh": "影音平台介面設計", "en": "Streaming platform UI", "f": false, "ne": "Juicy Stream"}, {"r": "r2r", "c": "system", "n": "料理收集所", "zh": "食譜收藏網站", "en": "Recipe collection site", "f": false, "ne": "Recipe Collection"}, {"r": "0803-course", "c": "course", "n": "DAY1 AI 生圖文應用", "zh": "AI 生圖與文案課程講義", "en": "Course page: AI image & copy generation", "f": false, "ne": "Day 1: AI Image & Copy"}, {"r": "0804-course", "c": "course", "n": "GEMFULL AI 影音創作全課程", "zh": "AI 影音創作系列課程講義", "en": "Course series: AI video creation", "f": false, "ne": "GEMFULL AI Video Creation"}, {"r": "COURSE-0810", "c": "course", "n": "AI 動畫 × GIF × 短影音", "zh": "短影音趨勢實戰課", "en": "Course: AI animation, GIFs & short video", "f": true, "ne": "AI Animation × GIF × Short Video"}, {"r": "260910-course", "c": "course", "n": "AI 辦公術", "zh": "打造數位工作夥伴課程", "en": "Course: AI for office productivity", "f": false, "ne": "AI for the Office"}, {"r": "Baileng-Time", "c": "course", "n": "繪本好幫手 AI 研習", "zh": "電腦 AI 繪本研習課程", "en": "Workshop: AI for picture books", "f": false, "ne": "AI Picture-Book Workshop"}, {"r": "LINE-OA-AI", "c": "course", "n": "LINE 客服機器人 × 蝦皮 AI SEO", "zh": "電商自動化實戰營", "en": "Bootcamp: LINE chatbot & Shopee AI SEO", "f": true, "ne": "LINE Chatbot × Shopee AI SEO Bootcamp"}, {"r": "ai-bot", "c": "course", "n": "全渠道機器人自動收單", "zh": "進階自動化收單課程", "en": "Advanced course: omnichannel order bots", "f": true, "ne": "Omnichannel Order Bot Masterclass"}, {"r": "google-seo", "c": "course", "n": "全域數位導流實戰班", "zh": "Google 商家、自媒體導流課", "en": "Course: Google Business & social traffic", "f": false, "ne": "Digital Traffic Bootcamp"}, {"r": "claude-skills-connectors-course", "c": "course", "n": "Claude Skills × Connectors", "zh": "AI 工作流程自動化課程", "en": "Course: workflow automation with Claude", "f": true, "ne": "Claude Skills × Connectors"}, {"r": "nanobanana-course", "c": "course", "n": "Google Nano Banana Pro", "zh": "AI 生圖課程介紹頁", "en": "Course page: Nano Banana Pro image AI", "f": false, "ne": "Google Nano Banana Pro Course"}, {"r": "story-flim", "c": "course", "n": "OnlyShot AI 短劇流水線", "zh": "AI 短劇課程解析", "en": "Course breakdown: AI short-drama pipeline", "f": false, "ne": "OnlyShot AI Short-Drama Pipeline"}, {"r": "ecom-ai-gift-pack", "c": "course", "n": "學員專屬大禮包", "zh": "電商 AI 工具總表（中英雙語）", "en": "Bilingual AI tool list for e-commerce students", "f": true, "ne": "Student AI Toolkit Gift Pack"}, {"r": "DSJ-REVIEW-WALL", "c": "course", "n": "學員心得牆", "zh": "學員評價展示", "en": "Student testimonial wall", "f": true, "ne": "Student Testimonial Wall"}, {"r": "5-hover", "c": "course", "n": "效果實驗室 Interaction Lab", "zh": "網頁互動效果示範", "en": "Web interaction effects demo", "f": false, "ne": "Interaction Lab"}, {"r": "dajun-1-1", "c": "bni", "n": "大軍 BNI 商務履歷", "zh": "大軍本人商務介紹", "en": "Dajun's own business profile", "f": true, "ne": "Dajun's Business Profile"}, {"r": "bni-1-1", "c": "bni", "n": "電商神助手 AI 自動化工作流", "zh": "大軍服務介紹（9年電商、蝦皮金選）", "en": "Dajun's AI automation services intro", "f": true, "ne": "AI Automation Workflow Services"}, {"r": "ppt-up", "c": "bni", "n": "BNI 簡報優化服務", "zh": "簡報優化服務銷售頁", "en": "Sales page for BNI deck makeovers", "f": true, "ne": "Presentation Makeover Service"}], "cats": {"brand": ["品牌官網", "Brand Websites"], "event": ["活動・報名", "Events & Sign-ups"], "system": ["管理系統・工具", "Systems & Tools"], "course": ["課程教學", "Courses"], "bni": ["商務簡報", "Business Profiles"]}};
+const CAT = {
+  brand:{c1:"#f4c46b",c2:"#c2562f",icon:'<path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/>'},
+  event:{c1:"#8b7bff",c2:"#3b2f9e",icon:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/>'},
+  system:{c1:"#3fd0c9",c2:"#14536e",icon:'<rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/>'},
+  course:{c1:"#ff8fb1",c2:"#7a2350",icon:'<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/>'},
+  bni:{c1:"#9fd36b",c2:"#2e5e2a",icon:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>'}
+};
+const svg = (p,s=22,c="currentColor") => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${c}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+let lang = "zh", filter = "featured", query = "";
+try { const s = localStorage.getItem("eg-lang"); if (s === "en" || s === "zh") lang = s; else if (!navigator.language.startsWith("zh")) lang = "en"; } catch(e) {}
+
+function counts(){ const c = {all:DATA.works.length, featured:DATA.works.filter(w=>w.f).length}; for (const k in DATA.cats) c[k] = DATA.works.filter(w=>w.c===k).length; return c; }
+function renderChips(){
+  const c = counts();
+  const list = [["featured",["⭐ 精選","⭐ Featured"]],["all",["全部","All"]],...Object.entries(DATA.cats)];
+  document.getElementById("chips").innerHTML = list.map(([k,n]) =>
+    `<button class="chip" data-k="${k}" aria-pressed="${filter===k}">${n[lang==="zh"?0:1]}<span class="n">${c[k]}</span></button>`).join("");
+}
+function card(w){
+  const C = CAT[w.c], name = lang==="zh" ? w.n : w.ne, desc = lang==="zh" ? w.zh : w.en;
+  const url = `https://gervenbuy.github.io/${w.r}/`;
+  const cat = DATA.cats[w.c][lang==="zh"?0:1];
+  return `<article class="work">
+    <a class="thumb" href="${url}" target="_blank" rel="noopener" aria-label="${name}">
+      ${w.f ? `<span class="badge">⭐ ${lang==="zh"?"精選":"Featured"}</span>` : ""}
+      <div class="cover" style="background:radial-gradient(circle at 85% 15%,${C.c1}55,transparent 55%),linear-gradient(135deg,${C.c2},#0f1528)">
+        <span class="glyph">${svg(C.icon,30,C.c1)}</span>
+        <div class="big">${name}</div>
+      </div>
+      ${w.f ? `<iframe data-src="${url}" title="${name}" tabindex="-1" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>` : ""}
+    </a>
+    <div class="body">
+      <div class="cat">${cat}</div>
+      <h3>${name}</h3>
+      <p>${desc}</p>
+      <div class="links">
+        <a href="${url}" target="_blank" rel="noopener">${lang==="zh"?"開啟網站":"Open site"} ↗</a>
+        <a class="code" href="https://github.com/gervenbuy/${w.r}" target="_blank" rel="noopener">${lang==="zh"?"原始碼":"Source"}</a>
+      </div>
+    </div>
+  </article>`;
+}
+function renderGrid(){
+  const q = query.trim().toLowerCase();
+  let list = DATA.works.filter(w => filter==="all" ? true : filter==="featured" ? w.f : w.c===filter);
+  if (q) list = DATA.works.filter(w => [w.n,w.ne,w.zh,w.en,w.r].join(" ").toLowerCase().includes(q));
+  const g = document.getElementById("grid");
+  g.innerHTML = list.length ? list.map(card).join("") : `<div class="empty">${lang==="zh"?"找不到相關作品":"No matching projects"}</div>`;
+  document.getElementById("moreWrap").style.display = (filter==="featured" && !q) ? "" : "none";
+  observeFrames();
+}
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { const f = e.target; f.src = f.dataset.src; f.onload = () => f.classList.add("ready"); io.unobserve(f); }
+}), {rootMargin:"200px"}) : null;
+function observeFrames(){ if (!io || matchMedia("(max-width:620px)").matches) return; document.querySelectorAll("iframe[data-src]").forEach(f => io.observe(f)); }
+function setLang(l){
+  lang = l; document.body.dataset.lang = l; document.documentElement.lang = l==="zh" ? "zh-Hant" : "en";
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.set===l));
+  document.getElementById("q").placeholder = l==="zh" ? "搜尋作品…" : "Search projects…";
+  try { localStorage.setItem("eg-lang", l); } catch(e) {}
+  renderChips(); renderGrid();
+}
+document.querySelectorAll(".lang button").forEach(b => b.onclick = () => setLang(b.dataset.set));
+document.getElementById("chips").onclick = e => { const b = e.target.closest(".chip"); if (!b) return; filter = b.dataset.k; query = ""; document.getElementById("q").value = ""; renderChips(); renderGrid(); };
+document.getElementById("q").oninput = e => { query = e.target.value; renderGrid(); };
+document.getElementById("more").onclick = () => { filter = "all"; renderChips(); renderGrid(); };
+const rv = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); rv.unobserve(e.target); } }), {threshold:.12}) : null;
+document.querySelectorAll(".reveal").forEach(el => rv ? rv.observe(el) : el.classList.add("in"));
+setLang(lang);
+</script>
+</body>
+</html>
